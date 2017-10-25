@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import {Router, NavigationEnd} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './index.html',
+  styleUrls: ['./index.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'calamus';
 }
