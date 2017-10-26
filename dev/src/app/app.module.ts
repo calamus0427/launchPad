@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
+import { HttpModule, JsonpModule } from '@angular/http';
+
 import { RouterModule, Routes } from '@angular/router';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -48,6 +51,8 @@ const appRoutes: Routes = [
     // 当前项目依赖那些模块
     BrowserModule,
     NgbModule,
+    HttpModule,
+    JsonpModule,
     FormsModule,
     RouterModule.forRoot(
       appRoutes,
