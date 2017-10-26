@@ -1,9 +1,6 @@
-<ul>
-    <li>工程</li>
-    <li>资源</li>
-    <li>教程</li>
-    <li>素材</li>
-    <li>F&Q</li>
-    <li>视频</li>
-    <li>个人中心</li>
+<button (click)='flag = !flag'><i class="glyphicon glyphicon-plus"></i></button>
+<ul *ngIf='flag'>
+    <li *ngFor='let item of navList;let key=index' (click)='showList(item,key)'>
+        {{navList.length}}--{{item}}--{{key}}
+    </li>
 </ul>

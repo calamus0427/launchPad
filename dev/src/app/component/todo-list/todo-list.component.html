@@ -1,0 +1,20 @@
+<br>
+<br/>
+<input type="text" [(ngModel)]='things' (keyup)='addListByEnter($event)' placeholder="输入待办项">
+<button (click)='addList()'><i class="glyphicon glyphicon-plus"></i></button>
+<h2>正在进行</h2>
+<ul>
+    <li *ngFor='let item of list;let key=index' [hidden]="item.status === 1">
+        <button (click)="changeStatus(key)">改变</button>
+        <span>{{item.status}}---{{item.name}}</span>
+        <button (click)="delThings(key)"><i class=" glyphicon glyphicon-remove "></i></button>
+    </li>
+</ul>
+<h2>已完成</h2>
+<ul>
+    <li *ngFor='let item of list;let key=index' [hidden]="item.status === 0">
+        <button (click)="changeStatus(key)">改变</button>
+        <span>{{item.status}}---{{item.name}}</span>
+        <button (click)="delThings(key)"><i class=" glyphicon glyphicon-remove "></i></button>
+    </li>
+</ul>

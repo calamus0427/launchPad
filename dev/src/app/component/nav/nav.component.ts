@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  public navList:any[] ;
+  public flag=true;
+
+  constructor() {
+    this.navList = ["工程","资源","视频","素材","教程","F&Q","个人中心"] ;
+   }
 
   ngOnInit() {
+  }
+
+  showList(msg,key) {
+    console.log(key,this.navList[key]) ;
+    this.navList[key] = "改变了" ;
+    alert(msg) ;
   }
 
 }

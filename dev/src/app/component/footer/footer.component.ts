@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  public msg:string="我是你爸爸";
+
   constructor() { }
 
   ngOnInit() {
