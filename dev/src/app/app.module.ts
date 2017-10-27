@@ -1,9 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { HttpModule, JsonpModule } from '@angular/http';
 
 import { RouterModule, Routes } from '@angular/router';
+
+
+// import { MatButtonModule, MatCheckboxModule } from '@angular/material';
+
+
+// import { MaterialModule } from '@angular/material';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
@@ -52,6 +59,7 @@ const appRoutes: Routes = [
   imports: [
     // 当前项目依赖那些模块
     BrowserModule,
+    BrowserAnimationsModule,
     NgbModule,
     HttpModule,
     JsonpModule,
