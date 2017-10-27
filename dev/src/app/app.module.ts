@@ -23,6 +23,7 @@ import { MusicListComponent } from './component/music-list/music-list.component'
 import { NewsComponent } from './component/news/news.component';
 import { IconComponent } from './component/icon/icon.component';
 import { ButtonComponent } from './component/button/button.component';
+import { CanvasBgComponent } from './component/canvas-bg/canvas-bg.component';
 
 
 
@@ -46,6 +47,7 @@ const appRoutes: Routes = [
     NewsComponent,
     IconComponent,
     ButtonComponent,
+    CanvasBgComponent,
   ],
   imports: [
     // 当前项目依赖那些模块
