@@ -1,3 +1,7 @@
+/**
+ *@author {{Calamus}} {{calamus0427.github.io}}
+ */
+
 import { Component, OnInit } from '@angular/core';
 import { StorageService } from '../../services/storage.service';
 
