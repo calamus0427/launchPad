@@ -1,20 +1,28 @@
-<br>
-<br/>
-<input type="text" [(ngModel)]='things' (keyup)='addListByEnter($event)' placeholder="输入待办项">
-<button (click)='addList()'><i class="glyphicon glyphicon-plus"></i></button>
-<h2>正在进行</h2>
-<ul>
-    <li *ngFor='let item of list;let key=index' [hidden]="item.status === 1">
-        <button (click)="changeStatus(key)">改变</button>
-        <span>{{item.status}}---{{item.name}}</span>
-        <button (click)="delThings(key)"><i class=" glyphicon glyphicon-remove "></i></button>
-    </li>
-</ul>
-<h2>已完成</h2>
-<ul>
-    <li *ngFor='let item of list;let key=index' [hidden]="item.status === 0">
-        <button (click)="changeStatus(key)">改变</button>
-        <span>{{item.status}}---{{item.name}}</span>
-        <button (click)="delThings(key)"><i class=" glyphicon glyphicon-remove "></i></button>
-    </li>
-</ul>
+<div class="todolist">
+    <div class="search">
+        <label class="root_title">TodoList:</label>
+        <input type="text" [(ngModel)]='things' (keyup)='addListByEnter($event)' placeholder="请输入待办项">
+        <a title="添加" (click)='addList()'><i class="glyphicon glyphicon-plus"></i></a>
+        <a class="clearAll" title="清空全部" href="#" (click)="clearAll(2)"><i class="glyphicon glyphicon-repeat"></i></a>
+    </div>
+
+
+    <span class="status_title status_ing">正在进行</span>
+    <!-- <a href="#" (click)="clearAll(0)">清空全部进行中项<i class="glyphicon glyphicon-repeat"></i></a> -->
+    <ul class="list list_ing">
+        <li *ngFor='let item of list;let key=index' [hidden]="item.status === 1">
+            <a title="添加到已完成" (click)="changeStatus(key)"><i class="glyphicon glyphicon-pencil"></i></a>
+            <span>{{item.name}}</span>
+            <a title="删除该项" (click)="delThings(key)"><i class=" glyphicon glyphicon-remove"></i></a>
+        </li>
+    </ul>
+    <span class="status_title status_down">已完成</span>
+    <!-- <a href="#" (click)="clearAll(1)">清空全部已完成项<i class="glyphicon glyphicon-repeat"></i></a> -->
+    <ul class="list list_down">
+        <li *ngFor='let item of list;let key=index' [hidden]="item.status === 0">
+            <a title="添加为正在进行" (click)="changeStatus(key)"><i class="glyphicon glyphicon-ok-circle"></i></a>
+            <span>{{item.name}}</span>
+            <a title="删除该项" (click)="delThings(key)"><i class=" glyphicon glyphicon-remove "></i></a>
+        </li>
+    </ul>
+</div>

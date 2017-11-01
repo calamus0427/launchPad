@@ -24,6 +24,7 @@ export class TodoListComponent implements OnInit {
     if (todolist) {
       this.list = todolist;
     }
+    this.unfinishedList = [] ;
 
   }
 
@@ -77,7 +78,13 @@ export class TodoListComponent implements OnInit {
     console.log(todolist);
     // 这个只能删除整个项，不能删除字符串里的具体内容
     // this.storage.removeItem('todolist[0]');
+  }
 
+  clearAll(flag){
+    var todolist = this.storage.getItem('todolist');
+  //这个删除没有在页面动态刷新，存储在localstorage的值是删除了，但页面没有跟着刷新，所以需要手动重置list
+      this.storage.removeItem('todolist');
+      this.list = [] ;
   }
 
   changeStatus(key){
