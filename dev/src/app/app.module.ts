@@ -31,6 +31,8 @@ import { NewsComponent } from './component/news/news.component';
 import { IconComponent } from './component/icon/icon.component';
 import { ButtonComponent } from './component/button/button.component';
 import { CanvasBgComponent } from './component/canvas-bg/canvas-bg.component';
+import { TalkComponent } from './component/talk/talk.component';
+import { ReaderComponent } from './component/reader/reader.component';
 
 
 
@@ -55,6 +57,8 @@ const appRoutes: Routes = [
     IconComponent,
     ButtonComponent,
     CanvasBgComponent,
+    TalkComponent,
+    ReaderComponent,
   ],
   imports: [
     // 当前项目依赖那些模块
