@@ -6,13 +6,11 @@ import { HttpModule, JsonpModule } from '@angular/http';
 
 import { RouterModule, Routes } from '@angular/router';
 
-
-// import { MatButtonModule, MatCheckboxModule } from '@angular/material';
-
-
-// import { MaterialModule } from '@angular/material';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule, MatCheckboxModule, MatPaginatorModule} from '@angular/material';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -33,6 +31,7 @@ import { ButtonComponent } from './component/button/button.component';
 import { CanvasBgComponent } from './component/canvas-bg/canvas-bg.component';
 import { TalkComponent } from './component/talk/talk.component';
 import { ReaderComponent } from './component/reader/reader.component';
+import { AccordionBasicComponent } from './component/accordion-basic/accordion-basic.component';
 
 
 
@@ -59,12 +58,17 @@ const appRoutes: Routes = [
     CanvasBgComponent,
     TalkComponent,
     ReaderComponent,
+    AccordionBasicComponent,
   ],
   imports: [
     // 当前项目依赖那些模块
     BrowserModule,
     BrowserAnimationsModule,
-    NgbModule,
+    NoopAnimationsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatPaginatorModule,
+    NgbModule.forRoot(),
     HttpModule,
     JsonpModule,
     FormsModule,
