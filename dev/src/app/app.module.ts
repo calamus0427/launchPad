@@ -32,10 +32,8 @@ import { CanvasBgComponent } from './component/canvas-bg/canvas-bg.component';
 import { TalkComponent } from './component/talk/talk.component';
 import { ReaderComponent } from './component/reader/reader.component';
 import { AccordionBasicComponent } from './component/accordion-basic/accordion-basic.component';
-
-
-
-
+import { SearchComponent } from './component/search/search.component';
+import { StarsComponent } from './component/stars/stars.component';
 
 const appRoutes: Routes = [
 
@@ -59,6 +57,8 @@ const appRoutes: Routes = [
     TalkComponent,
     ReaderComponent,
     AccordionBasicComponent,
+    SearchComponent,
+    StarsComponent,
   ],
   imports: [
     // 当前项目依赖那些模块

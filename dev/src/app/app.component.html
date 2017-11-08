@@ -1,9 +1,14 @@
 <app-header [msg]='msg'></app-header>
-<app-nav></app-nav>
-<app-footer></app-footer>
-<app-input></app-input>
-<app-todo-list></app-todo-list>
-<app-news></app-news>
-<app-canvas-bg></app-canvas-bg>
+
 <app-talk></app-talk>
-<app-accordion-basic></app-accordion-basic>
+<div class="container">
+    <div class="row">
+        <div calss="col-md-3">
+            <app-nav></app-nav>
+        </div>
+        <div calss="col-md-9">
+            <app-todo-list></app-todo-list>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
