@@ -9,3 +9,11 @@ canvas {
     z-index: -1;
     opacity: 1;
 }
+
+.chat {
+    background-color: green;
+    height: 100px;
+    width: 70%;
+    float: left;
+    box-sizing: border-box;
+}

@@ -6,9 +6,11 @@
         <div calss="col-md-3">
             <app-nav></app-nav>
         </div>
-        <div calss="col-md-9">
-            <app-todo-list></app-todo-list>
-        </div>
     </div>
 </div>
-<app-footer></app-footer>
+
+<a [routerLink]="['/home']">主页</a>
+<a [routerLink]="['/todolist']">todolist</a>
+<a [routerLink]="['/footer',1]">footer</a>
+<router-outlet></router-outlet>
+<router-outlet name="aux"></router-outlet>

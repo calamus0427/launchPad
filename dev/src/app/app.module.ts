@@ -5,6 +5,8 @@ import { NgModule } from '@angular/core';
 import { HttpModule, JsonpModule } from '@angular/http';
 
 import { RouterModule, Routes } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+
 
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule, MatPaginatorModule} from '@angular/material';
@@ -14,6 +16,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+
 
 import { StorageService } from './services/storage.service';
 
@@ -34,10 +37,18 @@ import { ReaderComponent } from './component/reader/reader.component';
 import { AccordionBasicComponent } from './component/accordion-basic/accordion-basic.component';
 import { SearchComponent } from './component/search/search.component';
 import { StarsComponent } from './component/stars/stars.component';
+import { Code404Component } from './component/code404/code404.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ProductComponent } from './pages/product/product.component';
+import { ResourcesComponent } from './pages/resources/resources.component';
+import { VideoComponent } from './pages/video/video.component';
+import { MaterialComponent } from './pages/material/material.component';
+import { AdminComponent } from './pages/admin/admin.component';
+import { QuestionComponent } from './pages/question/question.component';
+import { TutorialComponent } from './pages/tutorial/tutorial.component';
+import { ChatComponent } from './component/chat/chat.component';
 
-const appRoutes: Routes = [
 
-];
 
 @NgModule({
   declarations: [
@@ -59,6 +70,16 @@ const appRoutes: Routes = [
     AccordionBasicComponent,
     SearchComponent,
     StarsComponent,
+    Code404Component,
+    HomeComponent,
+    ProductComponent,
+    ResourcesComponent,
+    VideoComponent,
+    MaterialComponent,
+    AdminComponent,
+    QuestionComponent,
+    TutorialComponent,
+    ChatComponent,
   ],
   imports: [
     // 当前项目依赖那些模块
@@ -72,10 +93,7 @@ const appRoutes: Routes = [
     HttpModule,
     JsonpModule,
     FormsModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
-    )
+    AppRoutingModule
   ],
   // 服务
   providers: [
