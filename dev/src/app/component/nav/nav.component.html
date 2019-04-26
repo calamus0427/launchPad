@@ -1,6 +1,0 @@
-<a (click)='flag = !flag'><i class="glyphicon glyphicon-plus"></i></a>
-<ul *ngIf='flag'>
-    <li *ngFor='let item of navList;let key=index' (click)='showList(item,key)'>
-        {{key}}----{{item}}
-    </li>
-</ul>
